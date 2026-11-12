@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Community Gardens | Massachusetts Community Food Directory</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  >
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <a href="index.html" class="brand-link">
+      <span class="brand-title">Massachusetts Food Directory</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="background.html">Background</a>
+      <a href="gardens.html" class="active" aria-current="page">Community Gardens</a>
+      <a href="groceries.html">Local Grocery Stores</a>
+      <a href="about.html">About Us</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main class="container">
+
+  <section class="page-section">
+
+    <span class="eyebrow">GROWING TOGETHER</span>
+
+    <h1 class="page-title">Community Garden Directory</h1>
+
+    <p class="page-subtitle">
+      Find community gardens, urban farms, and neighborhood growing
+      spaces across Massachusetts. Search by ZIP code to discover
+      nearby agricultural spaces and explore their locations on the map.
+    </p>
+
+
+    <!-- ZIP CODE SEARCH -->
+
+    <div class="garden-search">
+
+      <label for="garden-zip-input">
+        Search by Massachusetts ZIP code
+      </label>
+
+      <div class="search-box-wrap">
+
+        <input
+          type="text"
+          id="garden-zip-input"
+          inputmode="numeric"
+          maxlength="5"
+          pattern="[0-9]{5}"
+          placeholder="Example: 02119"
+          aria-describedby="garden-search-help"
+        >
+
+        <button
+          type="button"
+          id="garden-search-btn"
+        >
+          Search ZIP
+        </button>
+
+        <button
+          type="button"
+          id="garden-reset-btn"
+          class="reset-btn"
+        >
+          Show All
+        </button>
+
+      </div>
+
+      <p id="garden-search-help" class="small-note">
+        Try 02119, 02124, 02215, or 02128.
+      </p>
+
+      <p
+        id="garden-result-count"
+        class="result-count"
+        aria-live="polite"
+      >
+        Showing all community gardens.
+      </p>
+
+    </div>
+
+
+    <!-- MAP AND DIRECTORY -->
+
+    <div class="split-layout">
+
+      <section
+        class="map-section"
+        aria-label="Community garden map"
+      >
+
+        <div class="map-heading">
+
+          <h2>Garden Locations</h2>
+
+          <span>OpenStreetMap</span>
+
+        </div>
+
+        <div
+          id="garden-map"
+          class="map-frame"
+          aria-label="Interactive map showing community garden locations"
+        ></div>
+
+      </section>
+
+
+      <section
+        class="directory-section"
+        aria-label="Garden directory"
+      >
+
+        <div class="directory-heading">
+
+          <h2>Garden Directory</h2>
+
+          <span>Massachusetts</span>
+
+        </div>
+
+        <div id="garden-list" class="directory-list">
+
+          <p class="small-note">
+            Loading community gardens...
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <p class="source-note">
+      Garden locations and descriptions are sample project data.
+      Confirm addresses, accessibility features, and availability
+      with each organization before visiting.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <p class="footer-brand">
+      Massachusetts Community Food Directory
+    </p>
+
+    <p class="footer-description">
+      This directory was created as part of a student project at
+      Olin College of Engineering to make Massachusetts food
+      resources easier to discover and access.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="A Massachusetts directory for community gardens, food assistance, local grocery stores, and food security resources."
+  >
+
+  <title>Home | Massachusetts Community Food Directory</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <a href="index.html" class="brand-link">
+      <span class="brand-title">Massachusetts Food Directory</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="background.html">Background</a>
+      <a href="gardens.html">Community Gardens</a>
+      <a href="groceries.html">Local Grocery Stores</a>
+      <a href="about.html">About Us</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main class="container">
+
+  <!-- HOMEPAGE INTRODUCTION -->
+
+  <section class="home-hero">
+
+    <div class="home-visual">
+
+      <div class="home-visual-words">
+        <span>GROW</span>
+        <span class="visual-divider">·</span>
+        <span>SHARE</span>
+        <span class="visual-divider">·</span>
+        <span>NOURISH</span>
+      </div>
+
+    </div>
+
+    <div class="hero-text">
+
+      <span class="eyebrow">GROWING STRONGER COMMUNITIES</span>
+
+      <h1>Community Food Resources &amp; Autonomy</h1>
+
+      <p>
+        This directory provides accessible information on community gardens,
+        urban farms, local grocers, and food assistance programs across Massachusetts.
+      </p>
+
+      <p>
+        Our project promotes food sovereignty: helping communities locate
+        local agricultural land and navigate assistance programs like SNAP
+        and the Massachusetts Healthy Incentives Program (HIP).
+      </p>
+
+      <a href="gardens.html" class="text-link">
+        Explore community gardens →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOD SECURITY TIMELINE -->
+
+  <section class="timeline-section">
+
+    <div class="timeline-heading">
+
+      <span class="eyebrow">STAY INFORMED</span>
+
+      <h2>Food Security &amp; Community News</h2>
+
+      <p>
+        Explore news, community initiatives, policies, and research
+        related to food access across Massachusetts.
+      </p>
+
+    </div>
+
+
+    <!-- CLICKABLE CATEGORY FILTERS -->
+
+    <div class="timeline-filters" aria-label="Filter timeline by category">
+
+      <button
+        type="button"
+        class="filter-btn active"
+        data-btn="all"
+        aria-pressed="true"
+      >
+        All News
+      </button>
+
+      <button
+        type="button"
+        class="filter-btn"
+        data-btn="purple"
+        aria-pressed="false"
+      >
+        <span class="filter-dot purple"></span>
+        Policy &amp; Advocacy
+      </button>
+
+      <button
+        type="button"
+        class="filter-btn"
+        data-btn="green"
+        aria-pressed="false"
+      >
+        <span class="filter-dot green"></span>
+        Community Actions
+      </button>
+
+      <button
+        type="button"
+        class="filter-btn"
+        data-btn="blue"
+        aria-pressed="false"
+      >
+        <span class="filter-dot blue"></span>
+        Research &amp; Reports
+      </button>
+
+    </div>
+
+
+    <!-- VERTICAL TIMELINE -->
+
+    <div class="timeline" id="timeline-list">
+
+      <article
+        class="timeline-item"
+        data-category="green"
+        data-side="left"
+      >
+
+        <div class="timeline-content">
+
+          <div class="date">NOV 21–24, 2026</div>
+
+          <h4>17th Annual March for the Food Bank</h4>
+
+          <p>
+            Led by Monte Belmonte and U.S. Rep. Jim McGovern,
+            walking 43 miles from Springfield to Greenfield to
+            raise funds for the Food Bank of Western Massachusetts.
+          </p>
+
+          <a
+            href="https://www.foodbankwma.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="timeline-item"
+        data-category="purple"
+        data-side="right"
+      >
+
+        <div class="timeline-content">
+
+          <div class="date">NOV 5, 2026</div>
+
+          <h4>21st Annual Chain of Giving Turkey Delivery</h4>
+
+          <p>
+            Gov. Maura Healey, Boston Mayor Michelle Wu,
+            and community volunteers helped distribute thousands
+            of turkeys to families in need.
+          </p>
+
+          <a
+            href="https://www.gbfb.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="timeline-item"
+        data-category="purple"
+        data-side="left"
+      >
+
+        <div class="timeline-content">
+
+          <div class="date">OCT 28, 2026</div>
+
+          <h4>UMass Right to Food Dialogue Forum</h4>
+
+          <p>
+            Lawmakers, researchers, and advocates came together
+            to discuss food access and nutritious food as a human right.
+          </p>
+
+          <a
+            href="https://www.umass.edu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="timeline-item"
+        data-category="purple"
+        data-side="right"
+      >
+
+        <div class="timeline-content">
+
+          <div class="date">OCT 24, 2025</div>
+
+          <h4>Massachusetts Food Assistance Response</h4>
+
+          <p>
+            State and nonprofit organizations coordinated
+            emergency resources to support families facing
+            disruptions to food assistance.
+          </p>
+
+          <a
+            href="https://www.mass.gov"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="timeline-item"
+        data-category="blue"
+        data-side="left"
+      >
+
+        <div class="timeline-content">
+
+          <div class="date">JUN 17, 2025</div>
+
+          <h4>Food Insecurity Research Report</h4>
+
+          <p>
+            Research from The Greater Boston Food Bank and
+            Mass General Brigham examined food insecurity
+            and the resources needed to address it.
+          </p>
+
+          <a
+            href="https://www.gbfb.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="timeline-item"
+        data-category="green"
+        data-side="right"
+      >
+
+        <div class="timeline-content">
+
+          <div class="date">MAY 4, 2025</div>
+
+          <h4>Project Bread Walk for Hunger</h4>
+
+          <p>
+            Community members came together to raise funds
+            and awareness for reliable access to nutritious
+            food across Massachusetts.
+          </p>
+
+          <a
+            href="https://www.projectbread.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <p class="source-note">
+      Timeline entries and dates are provided as project content.
+      Verify event details and link to original reporting before publishing.
+    </p>
+
+  </section>
+
+</main>
+
+
+<!-- SHARED FOOTER -->
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <p class="footer-brand">
+      Massachusetts Community Food Directory
+    </p>
+
+    <p class="footer-description">
+      This directory was created as part of a student project at
+      Olin College of Engineering to make Massachusetts food
+      resources easier to discover and access.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
