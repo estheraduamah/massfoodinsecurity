@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Community Gardens | Massachusetts Community Food Directory</title>
+  <title>Community Gardens &amp; Urban Farms | Massachusetts Community Food Directory</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +23,191 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""
   >
+
+  <style>
+    /* Prevent horizontal side-to-side scrolling and wrap navbar cleanly */
+    html,
+    body {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+
+    .site-header {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .site-header .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 0.65rem 1.25rem !important;
+      max-width: 1200px !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      margin: 0 auto !important;
+      padding: 1rem 1.25rem !important;
+      box-sizing: border-box !important;
+    }
+
+    .site-header .brand-link {
+      flex-shrink: 1 !important;
+      min-width: 0 !important;
+    }
+
+    .site-header .brand-title {
+      white-space: normal !important;
+      line-height: 1.2 !important;
+    }
+
+    .site-header .main-nav {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 0.45rem 1.1rem !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    .site-header .main-nav a {
+      white-space: nowrap !important;
+    }
+
+    @media (max-width: 860px) {
+      .site-header .header-inner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+
+      .site-header .main-nav {
+        width: 100% !important;
+        justify-content: flex-start !important;
+      }
+    }
+
+    /* Space-type filter buttons & directory cards */
+    .space-type-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.85rem;
+    }
+
+    .space-filter-btn {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #1e293b;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .space-filter-btn.active,
+    .space-filter-btn:hover {
+      background: #1f4e3d;
+      border-color: #1f4e3d;
+      color: #ffffff;
+    }
+
+    .directory-list {
+      max-height: 760px;
+      overflow-y: auto;
+      padding-right: 0.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .garden-entry-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+      cursor: pointer;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .garden-entry-card:hover {
+      border-color: #1f4e3d;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    }
+
+    .garden-card-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .garden-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .badge-garden {
+      background: #e6f4ea;
+      color: #166534;
+    }
+
+    .badge-farm {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .garden-neighborhood {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .garden-entry-card h3 {
+      margin: 0.25rem 0 0.3rem;
+      font-size: 1.12rem;
+      color: #0f172a;
+    }
+
+    .garden-org {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1f4e3d;
+      margin: 0 0 0.35rem;
+    }
+
+    .garden-address {
+      font-size: 0.92rem;
+      color: #334155;
+      margin: 0 0 0.6rem;
+    }
+
+    .garden-meta-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    .garden-meta-list li strong {
+      color: #0f172a;
+    }
+  </style>
 </head>
 
 <body>
@@ -54,16 +238,16 @@
 
     <span class="eyebrow">GROWING TOGETHER</span>
 
-    <h1 class="page-title">Community Garden Directory</h1>
+    <h1 class="page-title">Community Garden &amp; Urban Farm Directory</h1>
 
     <p class="page-subtitle">
-      Find community gardens, urban farms, and neighborhood growing
-      spaces across Massachusetts. Search by ZIP code to discover
-      nearby agricultural spaces and explore their locations on the map.
+      Explore all 111 community gardens and 8 urban farms across Boston
+      neighborhoods. Search by Massachusetts ZIP code, filter by space type,
+      or click any card to locate it on the map.
     </p>
 
 
-    <!-- ZIP CODE SEARCH -->
+    <!-- ZIP CODE & SPACE TYPE SEARCH -->
 
     <div class="garden-search">
 
@@ -100,8 +284,14 @@
 
       </div>
 
+      <div class="space-type-filters" role="group" aria-label="Filter by space type">
+        <button type="button" class="space-filter-btn active" data-space-filter="all">All Spaces (119)</button>
+        <button type="button" class="space-filter-btn" data-space-filter="garden">Community Gardens (111)</button>
+        <button type="button" class="space-filter-btn" data-space-filter="farm">Urban Farms (8)</button>
+      </div>
+
       <p id="garden-search-help" class="small-note">
-        Try 02119, 02124, 02215, or 02128.
+        Try 02119 (Roxbury), 02124 (Dorchester), 02128 (East Boston), 02130 (Jamaica Plain), 02126 (Mattapan), or 02215 (Fenway).
       </p>
 
       <p
@@ -109,7 +299,7 @@
         class="result-count"
         aria-live="polite"
       >
-        Showing all community gardens.
+        Showing all 119 community gardens and urban farms.
       </p>
 
     </div>
@@ -121,12 +311,12 @@
 
       <section
         class="map-section"
-        aria-label="Community garden map"
+        aria-label="Community garden and urban farm map"
       >
 
         <div class="map-heading">
 
-          <h2>Garden Locations</h2>
+          <h2>Garden &amp; Farm Locations</h2>
 
           <span>OpenStreetMap</span>
 
@@ -135,7 +325,7 @@
         <div
           id="garden-map"
           class="map-frame"
-          aria-label="Interactive map showing community garden locations"
+          aria-label="Interactive map showing community garden and urban farm locations"
         ></div>
 
       </section>
@@ -143,24 +333,18 @@
 
       <section
         class="directory-section"
-        aria-label="Garden directory"
+        aria-label="Garden and urban farm directory"
       >
 
         <div class="directory-heading">
 
-          <h2>Garden Directory</h2>
+          <h2>Complete Directory</h2>
 
-          <span>Massachusetts</span>
-
-        </div>
-
-        <div id="garden-list" class="directory-list">
-
-          <p class="small-note">
-            Loading community gardens...
-          </p>
+          <span>Boston, MA</span>
 
         </div>
+
+        <div id="garden-list" class="directory-list"></div>
 
       </section>
 
@@ -168,9 +352,8 @@
 
 
     <p class="source-note">
-      Garden locations and descriptions are sample project data.
-      Confirm addresses, accessibility features, and availability
-      with each organization before visiting.
+      Directory data compiled from the City of Boston Community Garden and Urban Farm Directories.
+      Confirm plot availability, waitlist status, and visiting hours with each organization before visiting.
     </p>
 
   </section>
@@ -203,7 +386,275 @@
   crossorigin=""
 ></script>
 
-<script src="js/script.js"></script>
+<script>
+const DIRECTORY_ITEMS = [
+  {"category": "garden", "name": "Penniman Road Community Garden", "org": "Boston Parks and Recreation Department", "address": "25 Penniman Road, Allston, MA 02134", "neighborhood": "Allston", "zip": "02134", "lat": 42.3547, "lng": -71.1362, "type": "Garden", "plots": "28", "fee": "$15", "waitlist": "Wait List as of July 2025: 35 people", "contact": "prcg.information@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Chestnut Hill Reservoir Community Garden", "org": "", "address": "Chestnut Hill Driveway, Brighton, MA 02135", "neighborhood": "Brighton", "zip": "02135", "lat": 42.3372, "lng": -71.1583, "type": "Garden", "plots": "32", "fee": "Ranges from $65-$175 per year based on plot size. Please contact garden staff for more information.", "waitlist": "Wait List as of June 2025: Over 45 people", "contact": "chrcgarden@gmail.com or 774-261-3952 for more information", "notes": ""},
+  {"category": "garden", "name": "Charles River Community Garden", "org": "", "address": "1345 Soldiers Field Rd, Allston, MA 02134", "neighborhood": "Allston", "zip": "02134", "lat": 42.3626, "lng": -71.1328, "type": "Garden", "plots": "75", "fee": "$30 per year.", "waitlist": "Wait List as of September 2026: 50", "contact": "Henry Shapiro at hshapir3@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Christian Herter Community Garden", "org": "", "address": "1155 Soldiers Field Rd, Allston, MA 02134", "neighborhood": "Allston", "zip": "02134", "lat": 42.3612, "lng": -71.1275, "type": "Garden", "plots": "68", "fee": "$50 per year.", "waitlist": "Wait List as of September 2026: 50", "contact": "Heather Condurso at heather.condurso@gmail.com or 973-652-663 for more information", "notes": ""},
+  {"category": "garden", "name": "Charlestown Sprouts Community Garden", "org": "Charlestown Sprouts", "address": "Terminal Street, Charlestown, MA 02129", "neighborhood": "Charlestown", "zip": "02129", "lat": 42.3756, "lng": -71.0558, "type": "Garden/Food Forest", "plots": "68", "fee": "$30 minimum (sliding scale)", "waitlist": "Waitlist as of June 2025: 36 people", "contact": "Gerald Robins at charlestownsprouts@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Gardens for Charlestown", "org": "Gardens for Charlestown", "address": "499 Main Street, Charlestown, MA, 02129 at Bunker Hill Street", "neighborhood": "Charlestown", "zip": "02129", "lat": 42.3792, "lng": -71.0664, "type": "Garden", "plots": "65", "fee": "$65", "waitlist": "Waitlist as of June 2025: 140 people, the waitlist form is available here.", "contact": "Cara Bradley at clerk@gardensforcharlestown.org, 617-365-7671 for more information", "notes": ""},
+  {"category": "garden", "name": "10 Josephine Community Garden", "org": "The Trustees of Reservations", "address": "10 Josephine Street, Dorchester, MA 02121", "neighborhood": "Dorchester", "zip": "02121", "lat": 42.3029, "lng": -71.0764, "type": "Garden", "plots": "10", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "29 Josephine Community Garden", "org": "The Trustees of Reservations", "address": "29 Josephine Street, Dorchester, MA 02121", "neighborhood": "Dorchester", "zip": "02121", "lat": 42.3033, "lng": -71.0769, "type": "Garden", "plots": "25", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Audrey Jacobs Community Garden", "org": "The Trustees of Reservations", "address": "32 Bullard Street, Dorchester, MA 02121", "neighborhood": "Dorchester", "zip": "02121", "lat": 42.3018, "lng": -71.0785, "type": "Garden", "plots": "8", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Barry Community Garden", "org": "The Trustees of Reservations", "address": "39 Barry Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3087, "lng": -71.0695, "type": "Garden", "plots": "13", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Bullard Community Garden", "org": "The Trustees of Reservations", "address": "33 Bullard Street, Dorchester, MA 02121", "neighborhood": "Dorchester", "zip": "02121", "lat": 42.3017, "lng": -71.0788, "type": "Garden", "plots": "17", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Claybourne Street Dorchester Garden", "org": "Dorchester Gardenlands", "address": "42 Claybourne Street, Dorchester, MA 02124", "neighborhood": "Dorchester", "zip": "02124", "lat": 42.2974, "lng": -71.0706, "type": "Garden", "plots": "20", "fee": "$30", "waitlist": "Waitlist: There is no waitlist as of Summer 2025. Text 857-350-0575 or 617-510-4743 for up to date information.", "contact": "Joe Ureneck at jureneck@comcast.net and/or Lynette at Lynnettef1@comcast.net for more information", "notes": ""},
+  {"category": "garden", "name": "Dacia and Woodcliff Community Garden", "org": "The Trustees of Reservations", "address": "31-37 Woodcliff Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3182, "lng": -71.0734, "type": "Garden", "plots": "34", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Ellington Community Food Forest Garden", "org": "Boston Food Forest Coalition", "address": "103 Ellington Street, Dorchester, MA 02121", "neighborhood": "Dorchester", "zip": "02121", "lat": 42.3023, "lng": -71.0844, "type": "Garden/Food Forest", "plots": "20", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information (local neighbors are encouraged to get involved)", "notes": "Note that there are no individual garden plots. The raised beds are maintained collectively by community members and the harvest is shared. Local neighbors are encouraged to get involved! Fruit Trees on site are peaches, persimmons, and others. Also has some shared raised beds for annual species, plus a robust herb spiral. Herbs, greens, tomatoes, strawberries, and more."},
+  {"category": "garden", "name": "Fannie Lou Hamer Community Garden", "org": "Dorchester Gardenlands", "address": "107 Greenbrier Street, Dorchester, MA 02124", "neighborhood": "Dorchester", "zip": "02124", "lat": 42.2966, "lng": -71.0715, "type": "Garden", "plots": "20", "fee": "$30", "waitlist": "Waitlist as of Summer 2025: 0", "contact": "jureneck@comcast.net for more information. You can also call 857-350-0575", "notes": ""},
+  {"category": "garden", "name": "Folsom Street Community Garden", "org": "The Folsom Group", "address": "25-27 Folsom Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3175, "lng": -71.0712, "type": "Garden", "plots": "17", "fee": "$50 ($25 for smaller plots)", "waitlist": "", "contact": "folsomstreetgarden@gmail.com or 617-820-0749 for more information", "notes": ""},
+  {"category": "garden", "name": "Greenwood Community Garden", "org": "The Trustees of Reservations", "address": "140-142 Greenwood Street, Dorchester, MA 02121", "neighborhood": "Dorchester", "zip": "02121", "lat": 42.3005, "lng": -71.0812, "type": "Garden", "plots": "12", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": "Status Update: The Greenwood Community Garden is closed for the 2026 growing season."},
+  {"category": "garden", "name": "Hope Garden", "org": "Boston Food Forest Coalition", "address": "424-428A Geneva Avenue, Dorchester, MA 02122", "neighborhood": "Dorchester", "zip": "02122", "lat": 42.2989, "lng": -71.0632, "type": "Food Forest/Greenhouse", "plots": "No individual plots", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information (local neighbors are encouraged to get involved)", "notes": ""},
+  {"category": "garden", "name": "Julian, Judson and Dean Community Garden", "org": "The Trustees of Reservations", "address": "48 Julian Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3179, "lng": -71.0748, "type": "Garden", "plots": "36", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Leyland Community Garden", "org": "The Trustees of Reservations", "address": "6-20 Leyland Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3194, "lng": -71.0725, "type": "Garden", "plots": "70", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Lucerne, Balsam and Irma Community Garden", "org": "The Trustees of Reservations", "address": "74-76 Lucerne Street, Dorchester, MA 02124", "neighborhood": "Dorchester", "zip": "02124", "lat": 42.2831, "lng": -71.0887, "type": "Garden", "plots": "40", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Lydon Community Garden", "org": "The Trustees of Reservations", "address": "57 Msgr. Lydon Way, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3235, "lng": -71.0628, "type": "Garden", "plots": "21", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Monadnock Community Garden", "org": "The Trustees of Reservations", "address": "21-23 Monadnock Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3168, "lng": -71.0702, "type": "Garden", "plots": "24", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Nightingale Community Garden", "org": "The Trustees of Reservations", "address": "512 Park Street, Dorchester, MA 02124", "neighborhood": "Dorchester", "zip": "02124", "lat": 42.2952, "lng": -71.0728, "type": "Garden", "plots": "133", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Norton and Stonehurst Community Garden", "org": "The Trustees of Reservations", "address": "88 Norton Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3076, "lng": -71.0672, "type": "Garden", "plots": "8", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Peace (An Binh) Community Garden", "org": "Viet-AID", "address": "35 Faulkner Street, Dorchester, MA 02122", "neighborhood": "Dorchester", "zip": "02122", "lat": 42.2981, "lng": -71.0595, "type": "Garden", "plots": "8-10", "fee": "", "waitlist": "", "contact": "contact@vietaid.org or (617) 822-3717 for more information", "notes": ""},
+  {"category": "garden", "name": "Petrucci Community Garden", "org": "", "address": "21 Coleman Street, Dorchester, MA 02122", "neighborhood": "Dorchester", "zip": "02122", "lat": 42.3071, "lng": -71.0668, "type": "Garden", "plots": "All communal space", "fee": "", "waitlist": "", "contact": "jureneck@comcast.net or (857) 350-0575 for more information", "notes": ""},
+  {"category": "garden", "name": "Savin Hill Wildlife Garden", "org": "Boston Food Forest Coalition", "address": "410 Savin Hill Ave, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3112, "lng": -71.0545, "type": "Food Forest/Wildlife Garden", "plots": "", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information", "notes": ""},
+  {"category": "garden", "name": "Spencer Community Garden", "org": "The Trustees of Reservations", "address": "96 Spencer Street, Dorchester, MA 02124", "neighborhood": "Dorchester", "zip": "02124", "lat": 42.2948, "lng": -71.0764, "type": "Garden", "plots": "56", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Uphams Corner Food Forest", "org": "Boston Food Forest Coalition", "address": "11A Everett Avenue, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3152, "lng": -71.0645, "type": "Garden/Food Forest", "plots": "No individual plots", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information (local neighbors are encouraged to get involved)", "notes": "Note: local neighbors are encouraged to get involved! This is a public green space under community care, with a focus on native perennials, without a focus on edible species. Boston Food Forest Coalition is seeking new stewards to help community members maintain the space."},
+  {"category": "garden", "name": "Wheatland Community Garden", "org": "The Trustees of Reservations", "address": "86 Wheatland Avenue, Dorchester, MA 02124", "neighborhood": "Dorchester", "zip": "02124", "lat": 42.2942, "lng": -71.0752, "type": "Garden", "plots": "18", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Windermere Community Garden", "org": "The Trustees of Reservations", "address": "9A Windermere Road, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3156, "lng": -71.0618, "type": "Garden", "plots": "13", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Sunset Garden at Woodward Park (formerly the Woodward Park Healing Garden)", "org": "The Folsom Group", "address": "20 Woodward Park Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3171, "lng": -71.0718, "type": "Garden", "plots": "6", "fee": "$50", "waitlist": "", "contact": "folsomstreetgarden@gmail.com or (617) 820-0749 for more information", "notes": ""},
+  {"category": "garden", "name": "SMSTA Community Garden", "org": "Sonoma Maple Schuyler Tenants Association", "address": "23 Schuyler Street, Dorchester, MA, 02119", "neighborhood": "Dorchester", "zip": "02119", "lat": 42.3118, "lng": -71.0846, "type": "Garden", "plots": "34", "fee": "None", "waitlist": "", "contact": "Chris Geer at cgeer1@verizon.net or 617-445-0060 for more information", "notes": ""},
+  {"category": "garden", "name": "294 Sumner Street", "org": "Eastie Farm, Inc.", "address": "294 Sumner Street, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3714, "lng": -71.0352, "type": "Garden", "plots": "No individual plots", "fee": "None", "waitlist": "", "contact": "info@eastiefarm.com or 617-419-0792 for more information (all are encouraged to get involved!)", "notes": ""},
+  {"category": "garden", "name": "Eagle Hill Community Garden", "org": "The Trustees of Reservations", "address": "339 Border Street, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3788, "lng": -71.0365, "type": "Garden", "plots": "21", "fee": "communitygardens@thetrustees.org for more information", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Garden at the Rockies Community Garden", "org": "Boston Parks and Recreation Department", "address": "144 Marginal Street, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3665, "lng": -71.0384, "type": "Garden", "plots": "13", "fee": "$325", "waitlist": "", "contact": "ddellolio5k@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Joe Ciampa Community Garden", "org": "The Trustees of Reservations", "address": "124 Marginal Street, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3669, "lng": -71.0392, "type": "Garden", "plots": "24", "fee": "email the communitygardens@thetrustees.org for up to date information", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Our Garden", "org": "Eastie Farm, Inc.", "address": "293 Border Street (across from Umana school), East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3776, "lng": -71.0374, "type": "Garden", "plots": "No individual plots", "fee": "None", "waitlist": "", "contact": "info@eastiefarm.com or 617-419-0787 for more information (all are encouraged to get involved!)", "notes": ""},
+  {"category": "garden", "name": "Secret Garden Geothermal Greenhouse", "org": "Eastie Farm, Inc.", "address": "6 Chelsea Terrace, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3728, "lng": -71.0315, "type": "Garden/Greenhouse", "plots": "No individual plots", "fee": "None", "waitlist": "", "contact": "will@eastiefarm.com or 617-419-0787 for more information (all are encouraged to get involved!)", "notes": ""},
+  {"category": "garden", "name": "Shore Plaza East Garden", "org": "Shore Plaza East", "address": "408-826 Border Street, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3821, "lng": -71.0342, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "617-569-7710 for more information", "notes": ""},
+  {"category": "garden", "name": "Fenway Victory Gardens", "org": "Boston Parks and Recreation Department", "address": "20 Park Drive, Fenway, MA 02215", "neighborhood": "Fenway", "zip": "02215", "lat": 42.3442, "lng": -71.0948, "type": "Garden", "plots": "500", "fee": "$40 ($25 if 65 or older)", "waitlist": "", "contact": "info@fenwayvictorygardens.org or 857-244-0262 for more information", "notes": ""},
+  {"category": "garden", "name": "Symphony Community Garden", "org": "The Trustees of Reservations", "address": "56-72 Symphony Road, Fenway, MA 02115", "neighborhood": "Fenway", "zip": "02115", "lat": 42.3418, "lng": -71.0868, "type": "Garden", "plots": "42", "fee": "email the communitygardens@thetrustees.org for up to date information", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Saranac Community Garden", "org": "Southwest Corridor Park", "address": "380 Northampton Street, South End / Roxbury, MA 02118", "neighborhood": "South End / Roxbury", "zip": "02118", "lat": 42.3396, "lng": -71.0815, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Anson/Spaulding Community Garden", "org": "Southwest Corridor Park", "address": "Between Green Street and Forest Hills Stations, closest to Forest Hills, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3035, "lng": -71.1128, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Brookside Community Garden", "org": "The Trustees of Reservations", "address": "36-55 Merriam Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3134, "lng": -71.1021, "type": "Garden", "plots": "25", "fee": "email the communitygardens@thetrustees.org for up to date information", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Chilcott and Granada Community Garden", "org": "The Trustees of Reservations", "address": "23 Granada Park, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3168, "lng": -71.1008, "type": "Garden", "plots": "11", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Day and Roundhill Community Garden", "org": "The Trustees of Reservations", "address": "69 Roundhill Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3238, "lng": -71.1065, "type": "Garden", "plots": "25", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Egleston Community Orchard", "org": "Boston Food Forest Coalition", "address": "195 Boylston Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3146, "lng": -71.1014, "type": "Food Forest", "plots": "No individual plots", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information (local neighbors are encouraged to get involved)", "notes": ""},
+  {"category": "garden", "name": "Forbes Community Garden", "org": "The Trustees of Reservations", "address": "19-31 Forbes Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3212, "lng": -71.1045, "type": "Garden", "plots": "28", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Hall/Boynton Community Garden", "org": "Southwest Corridor Park", "address": "Between Green Street and Forest Hills Stations, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3065, "lng": -71.1105, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Lamartine/Hubbard Community Garden", "org": "Southwest Corridor Park", "address": "Between Green Street and Stonybrook Stations, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3142, "lng": -71.1062, "type": "Garden", "plots": "", "fee": "", "waitlist": "Waitlist as of September 2025: 4-5 years", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Lawndale Community Garden", "org": "Southwest Corridor Park", "address": "Between Green Street and Stonybrook Stations, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3155, "lng": -71.1055, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Leland Community Garden", "org": "The Trustees of Reservations", "address": "2-6 Leland Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3095, "lng": -71.1088, "type": "Garden", "plots": "10", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information", "notes": ""},
+  {"category": "garden", "name": "McBride/Boynton Community Garden", "org": "Southwest Corridor Park", "address": "Between Green Street and Forest Hills Stations, closer to Green Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3082, "lng": -71.1096, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Minton Stable Community Garden", "org": "The Trustees of Reservations", "address": "110 Williams Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3048, "lng": -71.1092, "type": "Garden", "plots": "49", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status (to join the waitlist, fill out this form)", "notes": ""},
+  {"category": "garden", "name": "Nira Community Garden", "org": "The Trustees of Reservations", "address": "10 Nira Avenue, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3254, "lng": -71.1052, "type": "Garden", "plots": "7", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information", "notes": ""},
+  {"category": "garden", "name": "Oakdale Street Community Garden", "org": "Southwest Corridor Park", "address": "Between Green Street and Stonybrook Stations, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3128, "lng": -71.1068, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Paul Gore and Beecher Community Garden", "org": "The Trustees of Reservations", "address": "105 Paul Gore Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3195, "lng": -71.1072, "type": "Garden", "plots": "48", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Paul Gore Community Garden", "org": "Boston Parks and Recreation Department", "address": "60 Paul Gore Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3198, "lng": -71.1058, "type": "Garden", "plots": "40", "fee": "$30", "waitlist": "", "contact": "juneleone@aol.com for more information", "notes": ""},
+  {"category": "garden", "name": "Saint Rose Community Garden", "org": "The Trustees of Reservations", "address": "34-36 Saint Rose Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3032, "lng": -71.1145, "type": "Garden", "plots": "9", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status. People on the waitlist can co-garden in community garden beds.", "notes": ""},
+  {"category": "garden", "name": "South Street Community Garden", "org": "South Street Community Garden", "address": "271 South Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3025, "lng": -71.1162, "type": "Garden", "plots": "37-40", "fee": "$40", "waitlist": "Waitlist as of January 2026: 4", "contact": "Nina Berger, ninajberger@gmail.com or (617) 543-1595 for more information.", "notes": ""},
+  {"category": "garden", "name": "Southwest Corridor Community Farm", "org": "The Trustees of Reservations", "address": "57 Lamartine Street, Jamaica Plain, MA 02130", "neighborhood": "Jamaica Plain", "zip": "02130", "lat": 42.3204, "lng": -71.1028, "type": "Garden", "plots": "20", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information", "notes": ""},
+  {"category": "garden", "name": "Boston Nature Center Food Forest", "org": "Boston Food Forest Coalition", "address": "500 Walk Hill Street, Mattapan, MA 02126", "neighborhood": "Mattapan", "zip": "02126", "lat": 42.2856, "lng": -71.0998, "type": "Food Forest", "plots": "No individual plots", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information (local neighbors are encouraged to get involved)", "notes": ""},
+  {"category": "garden", "name": "Clark/Cooper Community Garden", "org": "", "address": "510 American Legion Highway, Mattapan, MA 02126", "neighborhood": "Mattapan", "zip": "02126", "lat": 42.2868, "lng": -71.1045, "type": "Garden", "plots": "300. Plots are 20 x 20 and only available to people in the following neighborhoods: Roxbury, Mattapan, Jamaica Plain, Roslindale, and Dorchester.", "fee": "$70", "waitlist": "", "contact": "cccgarden@yahoo.com for more information", "notes": ""},
+  {"category": "garden", "name": "Edgewater Food Forest at River Street", "org": "Boston Food Forest Coalition", "address": "640 River Street, Mattapan, MA 02126", "neighborhood": "Mattapan", "zip": "02126", "lat": 42.2682, "lng": -71.0956, "type": "Food Forest", "plots": "No individual plots", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information", "notes": ""},
+  {"category": "garden", "name": "Morton Street", "org": "Farmers Collaborative", "address": "632 Morton Street, Mattapan, MA 02126", "neighborhood": "Mattapan", "zip": "02126", "lat": 42.2815, "lng": -71.0908, "type": "Food Forest", "plots": "No individual plots", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information", "notes": ""},
+  {"category": "garden", "name": "Shangri-La Community Gardens", "org": "Boston Parks and Recreation Department", "address": "74 Orlando Street, Mattapan, MA 02126", "neighborhood": "Mattapan", "zip": "02126", "lat": 42.2754, "lng": -71.0982, "type": "Garden", "plots": "22", "fee": "$20 to $90 (depends on plot size)", "waitlist": "", "contact": "617-635-4505 for more information", "notes": ""},
+  {"category": "garden", "name": "Woolson Community Garden", "org": "The Trustees of Reservations", "address": "44 Woolson Street, Mattapan, MA 02126", "neighborhood": "Mattapan", "zip": "02126", "lat": 42.2792, "lng": -71.0924, "type": "Garden", "plots": "10", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Lawn Street Garden", "org": "Back of the Hill Community Development Corporation", "address": "63 Lawn Street, Mission Hill, MA 02120", "neighborhood": "Mission Hill", "zip": "02120", "lat": 42.3302, "lng": -71.1058, "type": "Garden", "plots": "55", "fee": "", "waitlist": "", "contact": "lawnstreetgarden@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Mission Hill Community Garden", "org": "The Trustees of Reservations", "address": "750-752 Parker Street, Mission Hill, MA 02120", "neighborhood": "Mission Hill", "zip": "02120", "lat": 42.3324, "lng": -71.0982, "type": "Garden", "plots": "51", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Tobin Community Center Garden", "org": "Sociedad Latina", "address": "1481 Tremont Street, Mission Hill, MA 02120", "neighborhood": "Mission Hill", "zip": "02120", "lat": 42.3315, "lng": -71.0996, "type": "Garden", "plots": "12", "fee": "", "waitlist": "", "contact": "617-442-4299 for more information", "notes": ""},
+  {"category": "garden", "name": "Healy Field Community Garden", "org": "Boston Parks and Recreation Department", "address": "160 Florence Street, Roslindale, MA 02131", "neighborhood": "Roslindale", "zip": "02131", "lat": 42.2838, "lng": -71.1215, "type": "Garden", "plots": "60", "fee": "$40", "waitlist": "", "contact": "gardenathealy@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Southwest Boston Community Garden", "org": "Boston Parks and Recreation Department", "address": "236 Cummins Highway, Roslindale, MA 02131", "neighborhood": "Roslindale", "zip": "02131", "lat": 42.2776, "lng": -71.1162, "type": "Garden", "plots": "60", "fee": "$40 minimum (depends on plot size)", "waitlist": "", "contact": "information included on application form", "notes": ""},
+  {"category": "garden", "name": "Alvah Kittredge Community Garden", "org": "The Trustees of Reservations", "address": "10-14 Highland Avenue, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3274, "lng": -71.0928, "type": "Garden", "plots": "12", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Bessie Barnes Community Garden", "org": "The Trustees of Reservations", "address": "25-29 Warwick Street, Roxbury, MA 02120", "neighborhood": "Roxbury", "zip": "02120", "lat": 42.3348, "lng": -71.0846, "type": "Garden", "plots": "17", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Cooper Garden", "org": "Edward L. Cooper Community Gardening and Education Center", "address": "Lower Roxbury (Kendall/Lenox Street area), Roxbury, MA 02118", "neighborhood": "Roxbury", "zip": "02118", "lat": 42.3368, "lng": -71.0812, "type": "Garden", "plots": "50", "fee": "$50", "waitlist": "", "contact": "coopergardening@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Crite Garden", "org": "Edward L. Cooper Community Gardening and Education Center", "address": "Lower Roxbury (Kendall/Lenox Street area), Roxbury, MA 02118", "neighborhood": "Roxbury", "zip": "02118", "lat": 42.3366, "lng": -71.0815, "type": "Garden", "plots": "28", "fee": "$55", "waitlist": "", "contact": "coopergardening@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Dennis/Huckins Street Garden", "org": "Dudley Neighbors, Inc.", "address": "26 Huckins Street, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3242, "lng": -71.0772, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "617-442-9670 or visit the website for more information", "notes": ""},
+  {"category": "garden", "name": "Dudley Greenhouse", "org": "The Food Project", "address": "11 Brook Avenue, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3231, "lng": -71.0764, "type": "Greenhouse", "plots": "32", "fee": "$35", "waitlist": "Waitlist: There is an application apply to use the greenhouse growing space that opens annually in July. Interested individuals can apply at https://thefoodproject.org/farms/dudley-greenhouse/", "contact": "dandrews@thefoodproject.org or 617-442-1322 ext. 13 for more information", "notes": ""},
+  {"category": "garden", "name": "El Jardin de la Amistad", "org": "The Trustees of Reservations", "address": "403-405 Dudley Street, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3256, "lng": -71.0785, "type": "Garden", "plots": "22", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Esperanza Garden", "org": "Project Hope", "address": "57 Magnolia Street, Roxbury, MA 02125", "neighborhood": "Roxbury", "zip": "02125", "lat": 42.3162, "lng": -71.0742, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "info@prohope.org or 617-442-1880 for more information", "notes": ""},
+  {"category": "garden", "name": "Lenox and Kendall Community Garden", "org": "The Trustees of Reservations", "address": "900 Tremont Street, Roxbury, MA 02118", "neighborhood": "Roxbury", "zip": "02118", "lat": 42.3374, "lng": -71.0825, "type": "Garden", "plots": "32", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Lewis Place Orchard", "org": "Dudley Neighbors, Inc.", "address": "Lewis Place, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3228, "lng": -71.0758, "type": "Orchard", "plots": "", "fee": "", "waitlist": "", "contact": "617-442-9670 or visit the website for more information", "notes": ""},
+  {"category": "garden", "name": "Madison Park Garden", "org": "Madison Park Development Corporation", "address": "55 Malcolm X Boulevard, Roxbury, MA 02120", "neighborhood": "Roxbury", "zip": "02120", "lat": 42.3328, "lng": -71.0884, "type": "Garden", "plots": "78", "fee": "None", "waitlist": "", "contact": "lstafford@madison-park.org or 617-946-6460 for more information", "notes": ""},
+  {"category": "garden", "name": "Magazine Community Garden", "org": "The Trustees of Reservations", "address": "29 Magazine Street, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3264, "lng": -71.0738, "type": "Garden", "plots": "22", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Maple/Schuyler Garden", "org": "Sonoma Maple Schuyler Tenants Association", "address": "Maple Street/Schuyler Street, Roxbury, MA 02121", "neighborhood": "Roxbury", "zip": "02121", "lat": 42.3115, "lng": -71.0852, "type": "Garden", "plots": "39", "fee": "None", "waitlist": "", "contact": "cgeer1@verizon.net or 617-445-0060 for more information", "notes": ""},
+  {"category": "garden", "name": "Margaret Wright Memorial Garden", "org": "", "address": "Fort Avenue, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3262, "lng": -71.0942, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "margaretwrightgarden@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Northampton Community Garden", "org": "The Trustees of Reservations", "address": "75-87 Northampton Street, Roxbury, MA 02118", "neighborhood": "Roxbury", "zip": "02118", "lat": 42.3382, "lng": -71.0786, "type": "Garden", "plots": "32", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Savin and Maywood Community Garden", "org": "The Trustees of Reservations", "address": "54-60 Savin Street, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3198, "lng": -71.0824, "type": "Garden", "plots": "32", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Thornton Street Garden", "org": "Haley House", "address": "95R Thornton Street, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3248, "lng": -71.0935, "type": "Garden", "plots": "27", "fee": "$1 per square foot (suggested)", "waitlist": "", "contact": "info@haleyhouse.org for more information", "notes": ""},
+  {"category": "garden", "name": "United Neighborhood of Lower Roxbury Community Garden", "org": "United Neighborhood of Lower Roxbury", "address": "90 Windsor Street, Roxbury, MA 02120", "neighborhood": "Roxbury", "zip": "02120", "lat": 42.3358, "lng": -71.0836, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "unlravillageatwork@gmail.com for more information", "notes": ""},
+  {"category": "garden", "name": "Wakullah Street Community Garden", "org": "", "address": "Hewes Street/Wakullah Street, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3215, "lng": -71.0888, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "347-278-7760 for more information", "notes": ""},
+  {"category": "garden", "name": "Winthrop Community Garden", "org": "The Trustees of Reservations", "address": "25 Winthrop Street, Roxbury, MA 02119", "neighborhood": "Roxbury", "zip": "02119", "lat": 42.3252, "lng": -71.0812, "type": "Garden", "plots": "16", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "D Street Garden", "org": "South Boston Neighborhood Development Corporation", "address": "273 D Street, South Boston, MA 02127", "neighborhood": "South Boston", "zip": "02127", "lat": 42.3398, "lng": -71.0502, "type": "Garden", "plots": "8", "fee": "$20", "waitlist": "", "contact": "courtney.mulligan@sbndc.org or 617-268-9610 for more information", "notes": ""},
+  {"category": "garden", "name": "West 2nd Garden", "org": "South Boston Neighborhood Development Corporation", "address": "175-179 W First Street, South Boston, MA 02127", "neighborhood": "South Boston", "zip": "02127", "lat": 42.3426, "lng": -71.0535, "type": "Garden", "plots": "20", "fee": "$20", "waitlist": "", "contact": "courtney.mulligan@sbndc.org or 617-268-9610 for more information", "notes": ""},
+  {"category": "garden", "name": "Berkeley Community Garden", "org": "The Trustees of Reservations", "address": "500 Tremont Street, South End, MA 02116", "neighborhood": "South End", "zip": "02116", "lat": 42.3456, "lng": -71.0718, "type": "Garden", "plots": "158", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Blackwood/Claremont Community Garden", "org": "Southwest Corridor Park", "address": "Near Mass Ave Station, across from Claremont Street, South End, MA 02118", "neighborhood": "South End", "zip": "02118", "lat": 42.3412, "lng": -71.0804, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Braddock Park Community Garden", "org": "Southwest Corridor Park", "address": "Near Braddock Park, between Mass Ave and Back Bay Stations, South End, MA 02116", "neighborhood": "South End", "zip": "02116", "lat": 42.3446, "lng": -71.0772, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Follen Community Garden", "org": "Southwest Corridor Park", "address": "Near Follen Street, between Mass Ave and Back Bay Stations, South End, MA 02116", "neighborhood": "South End", "zip": "02116", "lat": 42.3438, "lng": -71.0782, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Greenwich/Cumberland Community Garden", "org": "Southwest Corridor Park", "address": "Near Greenwich Park, between Mass Ave and Back Bay Stations, South End, MA 02116", "neighborhood": "South End", "zip": "02116", "lat": 42.3428, "lng": -71.0792, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Harcourt Community Garden", "org": "Southwest Corridor Park", "address": "Southwest Corridor Park (Harcourt Street area), South End, MA 02116", "neighborhood": "South End", "zip": "02116", "lat": 42.3458, "lng": -71.0762, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "gardens@southwestcorridorpark.org for more information", "notes": "Apply for a garden at https://southwestcorridorpark.org/cgapplication.asp Learn more at https://southwestcorridorpark.org/gardening.asp"},
+  {"category": "garden", "name": "Harrison Urban Garden", "org": "The Trustees of Reservations", "address": "700 Harrison Avenue, South End, MA 02118", "neighborhood": "South End", "zip": "02118", "lat": 42.3388, "lng": -71.0715, "type": "Garden", "plots": "29", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Rutland and Washington Community Garden", "org": "The Trustees of Reservations", "address": "1561-1565 Washington Street, South End, MA 02118", "neighborhood": "South End", "zip": "02118", "lat": 42.3392, "lng": -71.0754, "type": "Garden", "plots": "47", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Rutland Green", "org": "The Trustees of Reservations", "address": "74 Rutland Street, South End, MA 02118", "neighborhood": "South End", "zip": "02118", "lat": 42.3404, "lng": -71.0776, "type": "Garden", "plots": "16", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Rutland’s Haven", "org": "The Trustees of Reservations", "address": "Rutland Street, South End, MA 02118", "neighborhood": "South End", "zip": "02118", "lat": 42.3408, "lng": -71.0782, "type": "Garden", "plots": "26", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Unity Tower Garden", "org": "Torre Unidad", "address": "West Dedham Street/Shawmut Avenue, South End, MA 02118", "neighborhood": "South End", "zip": "02118", "lat": 42.3418, "lng": -71.0728, "type": "Garden", "plots": "", "fee": "", "waitlist": "", "contact": "617-988-5377 for more information (garden is only for Torre Unidad residents)", "notes": ""},
+  {"category": "garden", "name": "Warren and Clarendon Community Garden", "org": "The Trustees of Reservations", "address": "20-22 Clarendon Street, South End, MA 02116", "neighborhood": "South End", "zip": "02116", "lat": 42.3452, "lng": -71.0736, "type": "Garden", "plots": "20", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "West Springfield Community Garden", "org": "The Trustees of Reservations", "address": "106-116 West Springfield Street, South End, MA 02118", "neighborhood": "South End", "zip": "02118", "lat": 42.3398, "lng": -71.0788, "type": "Garden", "plots": "35", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Worcester Community Garden", "org": "The Trustees of Reservations", "address": "108-138 Worcester Street, South End, MA 02118", "neighborhood": "South End", "zip": "02118", "lat": 42.3391, "lng": -71.0796, "type": "Garden", "plots": "157", "fee": "", "waitlist": "", "contact": "communitygardens@thetrustees.org for more information regarding the annual fee and waitlist status", "notes": ""},
+  {"category": "garden", "name": "Old West Church", "org": "Boston Food Forest Coalition", "address": "131 Cambridge Street, West End / Beacon Hill, MA 02114", "neighborhood": "West End / Beacon Hill", "zip": "02114", "lat": 42.3612, "lng": -71.0642, "type": "Food Forest", "plots": "No individual plots", "fee": "", "waitlist": "", "contact": "info@bostonfoodforest.org for more information (local neighbors are encouraged to get involved)", "notes": ""},
+  {"category": "farm", "name": "Glenway Farm", "org": "Urban Farming Institute", "address": "131 Glenway Street, Dorchester, MA 02121", "neighborhood": "Dorchester", "zip": "02121", "lat": 42.3012, "lng": -71.0825, "type": "Urban Farm", "plots": "", "fee": "", "waitlist": "", "contact": "info@urbanfarminginstitute.org or (617) 989-9920", "notes": "This site is currently undergoing renovations. Email or call to learn more or volunteer."},
+  {"category": "farm", "name": "The West Cottage Farm and Langdon Street Farm", "org": "The Food Project", "address": "40 West Cottage Street, Dorchester, MA 02125", "neighborhood": "Dorchester", "zip": "02125", "lat": 42.3186, "lng": -71.0754, "type": "Urban Farm", "plots": "", "fee": "", "waitlist": "", "contact": "dandrews@thefoodproject.org or (617) 442-1322 Ext. 13", "notes": "Produce is sold at Dudley Town Common and Ashmont farmers' markets and donated to Rosie's Place, the Mosque for Praising Allah, Rounding the Bases, Dorchester Community Fridge, and Project Hope Shelter. Volunteer opportunities are limited due to high demand."},
+  {"category": "farm", "name": "Tucker Farm", "org": "Urban Farming Institute", "address": "29 Tucker Street, Mattapan, MA 02126", "neighborhood": "Mattapan", "zip": "02126", "lat": 42.2785, "lng": -71.0938, "type": "Urban Farm", "plots": "", "fee": "", "waitlist": "", "contact": "info@urbanfarminginstitute.org or (617) 989-9920", "notes": "Produce from Tucker Farm is sold at 487 Norfolk Street, Mattapan. Email or call to learn more or volunteer."},
+  {"category": "farm", "name": "Corner Stalk Farm", "org": "", "address": "101 Condor Street, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3828, "lng": -71.0332, "type": "Urban Farm", "plots": "", "fee": "", "waitlist": "", "contact": "Visit the Corner Stalk Farm website to order produce", "notes": "Grows in a recycled shipping container year-round."},
+  {"category": "farm", "name": "Eastie Farm", "org": "Eastie Farm, Inc.", "address": "294 Sumner Street, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3714, "lng": -71.0352, "type": "Urban Farm", "plots": "", "fee": "", "waitlist": "", "contact": "info@eastiefarm.com or 617-419-0787", "notes": "Produce available through their CSA program and donated to local community organizations and residents. Local neighbors are welcome to volunteer and join upcoming events."},
+  {"category": "farm", "name": "6 Chelsea Terrace (Eastie Farm)", "org": "Eastie Farm, Inc.", "address": "6 Chelsea Terrace, East Boston, MA 02128", "neighborhood": "East Boston", "zip": "02128", "lat": 42.3728, "lng": -71.0315, "type": "Urban Farm", "plots": "", "fee": "", "waitlist": "", "contact": "info@eastiefarm.com or 617-419-0787", "notes": "Eastie Farm's main site housing their office, geothermal greenhouse, and container farms. Produce available via CSA and community donations; neighbors welcome to volunteer."},
+  {"category": "farm", "name": "Fenway Farms", "org": "Green City Growers", "address": "Fenway Park, Boston, MA 02215", "neighborhood": "Fenway", "zip": "02215", "lat": 42.3467, "lng": -71.0972, "type": "Urban Farm", "plots": "", "fee": "", "waitlist": "", "contact": "Visit the Green City Growers website for more information", "notes": "Rooftop urban farm at Fenway Park operated by Green City Growers."},
+  {"category": "farm", "name": "We Grow Microgreens", "org": "We Grow Microgreens, LLC", "address": "21 Norton Street, Hyde Park, MA 02136", "neighborhood": "Hyde Park", "zip": "02136", "lat": 42.2568, "lng": -71.1235, "type": "Urban Farm", "plots": "", "fee": "", "waitlist": "", "contact": "Owned and run by urban growers Lisa Evans and Tim Smith", "notes": "Specializes in microgreens, edible flowers, tea leaves, herbs, and medicinal plants grown with natural sunlight in a glass greenhouse, two high tunnels, and raised garden beds; produce sold at their farm stand and local markets."}
+];
+
+document.addEventListener("DOMContentLoaded", function () {
+  const listEl = document.getElementById("garden-list");
+  const zipInput = document.getElementById("garden-zip-input");
+  const searchBtn = document.getElementById("garden-search-btn");
+  const resetBtn = document.getElementById("garden-reset-btn");
+  const resultCount = document.getElementById("garden-result-count");
+  const spaceButtons = Array.from(document.querySelectorAll(".space-filter-btn"));
+
+  const map = L.map("garden-map").setView([42.322, -71.084], 12);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(map);
+
+  const markerLayer = L.layerGroup().addTo(map);
+  let activeCategory = "all";
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function linkify(str) {
+    return escapeHtml(str).replace(
+      /(https?:\/\/[^\s)]+)/g,
+      '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
+  }
+
+  const enrichedItems = DIRECTORY_ITEMS.map((item) => {
+    const isFarm = item.category === "farm";
+    const marker = L.circleMarker([item.lat, item.lng], {
+      radius: isFarm ? 8 : 6,
+      fillColor: isFarm ? "#d97706" : "#1f4e3d",
+      color: "#ffffff",
+      weight: 1.5,
+      opacity: 1,
+      fillOpacity: 0.92
+    });
+
+    marker.bindPopup(
+      `<strong>${escapeHtml(item.name)}</strong><br>` +
+      `<span>${isFarm ? "Urban Farm" : "Community Garden"} · ${escapeHtml(item.neighborhood)} (${escapeHtml(item.zip)})</span><br>` +
+      `<small>${escapeHtml(item.address)}</small>`
+    );
+
+    const card = document.createElement("article");
+    card.className = "garden-entry-card";
+
+    let metaHtml = "";
+    if (item.type) metaHtml += `<li><strong>Type of Green Space:</strong> ${escapeHtml(item.type)}</li>`;
+    if (item.plots) metaHtml += `<li><strong>Number of Garden Plots:</strong> ${escapeHtml(item.plots)}</li>`;
+    if (item.fee) metaHtml += `<li><strong>Annual Fee:</strong> ${escapeHtml(item.fee)}</li>`;
+    if (item.waitlist) metaHtml += `<li><strong>Waitlist:</strong> ${linkify(item.waitlist)}</li>`;
+    if (item.notes) metaHtml += `<li><strong>Details:</strong> ${linkify(item.notes)}</li>`;
+    if (item.contact) metaHtml += `<li><strong>Contact:</strong> ${linkify(item.contact)}</li>`;
+
+    card.innerHTML = `
+      <div class="garden-card-top">
+        <span class="garden-badge ${isFarm ? "badge-farm" : "badge-garden"}">
+          ${isFarm ? "Urban Farm" : "Community Garden"}
+        </span>
+        <span class="garden-neighborhood">${escapeHtml(item.neighborhood)} · ${escapeHtml(item.zip)}</span>
+      </div>
+      <h3>${escapeHtml(item.name)}</h3>
+      ${item.org ? `<p class="garden-org">${escapeHtml(item.org)}</p>` : ""}
+      <p class="garden-address">${escapeHtml(item.address)}</p>
+      <ul class="garden-meta-list">${metaHtml}</ul>
+    `;
+
+    card.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") return;
+      map.setView([item.lat, item.lng], 15);
+      marker.openPopup();
+    });
+
+    return { ...item, marker, card };
+  });
+
+  function render() {
+    const zipQuery = (zipInput.value || "").trim().replace(/\D/g, "");
+    markerLayer.clearLayers();
+    listEl.innerHTML = "";
+
+    const bounds = [];
+    let count = 0;
+
+    enrichedItems.forEach((item) => {
+      const matchesZip = !zipQuery || item.zip.startsWith(zipQuery);
+      const matchesCat = activeCategory === "all" || item.category === activeCategory;
+      if (matchesZip && matchesCat) {
+        count += 1;
+        item.marker.addTo(markerLayer);
+        listEl.appendChild(item.card);
+        bounds.push([item.lat, item.lng]);
+      }
+    });
+
+    const label =
+      activeCategory === "farm"
+        ? "urban farms"
+        : activeCategory === "garden"
+        ? "community gardens"
+        : "community gardens and urban farms";
+
+    resultCount.textContent = zipQuery
+      ? `Showing ${count} ${label} matching ZIP code "${zipQuery}".`
+      : `Showing ${count} ${label}.`;
+
+    if (bounds.length === 1) {
+      map.setView(bounds[0], 15);
+    } else if (bounds.length > 1) {
+      map.fitBounds(bounds, { padding: [30, 30] });
+    }
+  }
+
+  searchBtn.addEventListener("click", render);
+  zipInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      render();
+    }
+  });
+
+  resetBtn.addEventListener("click", function () {
+    zipInput.value = "";
+    activeCategory = "all";
+    spaceButtons.forEach((b) => b.classList.toggle("active", b.dataset.spaceFilter === "all"));
+    render();
+  });
+
+  spaceButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      activeCategory = btn.dataset.spaceFilter || "all";
+      spaceButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      render();
+    });
+  });
+
+  render();
+});
+</script>
 
 </body>
 </html>
