@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Background | Massachusetts Community Food Directory</title>
+  <title>Background &amp; Food Wellness | Massachusetts Community Food Directory</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +16,165 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Responsive navbar & overflow protection */
+    html,
+    body {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+
+    .site-header {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .site-header .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 0.65rem 1.25rem !important;
+      max-width: 1200px !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      margin: 0 auto !important;
+      padding: 1rem 1.25rem !important;
+      box-sizing: border-box !important;
+    }
+
+    .site-header .brand-link {
+      flex-shrink: 1 !important;
+      min-width: 0 !important;
+    }
+
+    .site-header .brand-title {
+      white-space: normal !important;
+      line-height: 1.2 !important;
+    }
+
+    .site-header .main-nav {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 0.45rem 1.1rem !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    .site-header .main-nav a {
+      white-space: nowrap !important;
+    }
+
+    @media (max-width: 860px) {
+      .site-header .header-inner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+
+      .site-header .main-nav {
+        width: 100% !important;
+        justify-content: flex-start !important;
+      }
+    }
+
+    /* Box-free editorial hierarchy for nested subtopics */
+    .bg-sublist-heading {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1f4e3d;
+      margin: 1.85rem 0 1.15rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1.5px solid #1f4e3d;
+      display: inline-block;
+    }
+
+    .bg-sublist {
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+      margin-left: 0.25rem;
+      padding-left: 1.35rem;
+      border-left: 2px solid #cbd9d1;
+    }
+
+    .bg-subitem {
+      padding-bottom: 1.35rem;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .bg-subitem:last-child {
+      padding-bottom: 0.15rem;
+      border-bottom: none;
+    }
+
+    .bg-subitem-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .bg-subitem-num {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #1f4e3d;
+      flex-shrink: 0;
+    }
+
+    .bg-subitem h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .bg-subitem p {
+      margin: 0;
+      padding-left: 2.35rem;
+    }
+
+    @media (max-width: 640px) {
+      .bg-sublist {
+        padding-left: 1rem;
+      }
+
+      .bg-subitem-title-row {
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+
+      .bg-subitem p {
+        padding-left: 0;
+      }
+    }
+
+    .sources-links {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .sources-links li {
+      word-break: break-word;
+    }
+
+    .sources-links a {
+      display: inline;
+      margin-top: 0;
+    }
+  </style>
 </head>
 
 <body>
@@ -45,177 +203,366 @@
 
   <section class="page-section">
 
-    <span class="eyebrow">UNDERSTANDING FOOD ASSISTANCE</span>
+    <span class="eyebrow">WHY FOOD ACCESS MATTERS</span>
 
     <h1 class="page-title">
-      Background &amp; Food Assistance
+      Food Wellness, Food Deserts &amp; Public Health
     </h1>
 
     <p class="page-subtitle">
-      Understanding state and federal food assistance programs empowers
-      individuals and community organizers to maximize access to fresh,
-      healthy, and affordable food.
+      Understanding how nutrition shapes physical and mental wellbeing,
+      the systemic factors behind food deserts, and the public health
+      programs working to expand equitable access to fresh food.
     </p>
 
 
-    <!-- SNAP AND HIP INFORMATION -->
+    <div class="directory-intro">
 
-    <div class="assistance-grid">
+      <p>
+        Explore the research and public health context behind our directory,
+        from the role of daily nutrition in preventing chronic illness to the
+        neighborhood barriers that limit fresh food access.
+      </p>
+
+    </div>
 
 
-      <!-- SNAP -->
+    <!-- EDITORIAL SECTIONS (MATCHING GROCERIES DIRECTORY LAYOUT) -->
 
-      <article class="assistance-col">
+    <div class="grocery-directory">
 
-        <div class="info-card-sublabel sublabel-purple">
-          SNAP EBT Benefits
+
+      <!-- SECTION 01: IMPORTANCE OF FOOD WELLNESS -->
+
+      <article class="grocery-item" aria-labelledby="heading-wellness">
+
+        <div class="grocery-number">01</div>
+
+        <div class="grocery-content">
+
+          <h2 id="heading-wellness">Importance of Food Wellness</h2>
+
+          <div class="row-address">
+            Physical Health, Mental Wellbeing &amp; Nutrition
+          </div>
+
+          <p>
+            Repeated studies have agreed that food is a very important aspect
+            in someone&rsquo;s health, and what one eats can have a big impact
+            on both their physical and mental wellbeing. Proper food nutrition
+            is required for growth and brain development, disease prevention,
+            and good mood.
+          </p>
+
+          <p>
+            For example, heart health has been directly linked to one&rsquo;s
+            diet. Tailoring your diet by eating foods like vegetables, fruits,
+            and whole grains can help reduce blood pressure and help prevent or
+            slow heart disease. Eating healthy has also been connected to a
+            reduced cancer risk and improved mood due to impacts on the gut
+            microbiome, blood glucose levels, and immune activation.
+          </p>
+
+          <p>
+            According to the CDC, fewer than 1 in 10 children and adults eat
+            the recommended amount of vegetables. Many things may factor into
+            this statistic, with one of them being food deserts, which our
+            organization focuses on battling.
+          </p>
+
         </div>
-
-        <h2>
-          Supplemental Nutrition Assistance Program
-        </h2>
-
-        <p>
-          The Supplemental Nutrition Assistance Program (SNAP) helps
-          eligible households purchase groceries through monthly benefits
-          deposited onto an Electronic Benefits Transfer (EBT) card.
-        </p>
-
-        <p>
-          SNAP benefits can be used at participating grocery stores,
-          farmers markets, and other approved food retailers.
-        </p>
-
-        <h3 class="minor-heading">
-          How SNAP can help
-        </h3>
-
-        <ul class="clean-list">
-
-          <li>
-            Provides monthly funds for eligible food purchases.
-          </li>
-
-          <li>
-            Can be used at participating grocery stores and farmers markets.
-          </li>
-
-          <li>
-            May connect qualifying households with additional assistance programs.
-          </li>
-
-          <li>
-            Benefits are deposited onto an EBT card.
-          </li>
-
-        </ul>
-
-        <a
-          href="https://dtaconnect.eohhs.mass.gov/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="editorial-link-btn link-purple"
-        >
-          Apply through DTA Connect ↗
-        </a>
 
       </article>
 
 
-      <!-- HIP -->
+      <!-- SECTION 02: WHAT ARE FOOD DESERTS -->
 
-      <article class="assistance-col">
+      <article class="grocery-item" aria-labelledby="heading-deserts">
 
-        <div class="info-card-sublabel sublabel-green">
-          HIP Cashback Program
+        <div class="grocery-number">02</div>
+
+        <div class="grocery-content">
+
+          <h2 id="heading-deserts">What are Food Deserts</h2>
+
+          <div class="row-address">
+            Neighborhood Barriers &amp; Systemic Contributing Factors
+          </div>
+
+          <p>
+            Food deserts are communities that have poor access to healthy and
+            affordable foods. They tend to be in low-income and historically
+            marginalized areas throughout the country. Food deserts make it
+            harder to access healthy foods because things like fruits,
+            vegetables, whole grains, dairy, peas, beans, meat, and fish are
+            expensive to purchase or simply not an available option at all.
+          </p>
+
+          <div class="bg-sublist-heading">
+            Contributing Factors to Food Deserts
+          </div>
+
+          <div class="bg-sublist">
+
+            <div class="bg-subitem">
+              <div class="bg-subitem-title-row">
+                <span class="bg-subitem-num">02.1</span>
+                <h3>Food Insecurity</h3>
+              </div>
+              <p>
+                Food insecurity is the disrupted or limited access to
+                sufficient nutrients at all times. It can be temporary (for
+                example, running out of food for a few days) or long term (such
+                as persistent poverty) and is 2.5 times greater in low-income
+                areas than the national average.
+              </p>
+            </div>
+
+            <div class="bg-subitem">
+              <div class="bg-subitem-title-row">
+                <span class="bg-subitem-num">02.2</span>
+                <h3>Social Determinants of Health</h3>
+              </div>
+              <p>
+                Social determinants of health are factors beyond one&rsquo;s
+                control that impact their ability to access food. They can be
+                caused by income, community infrastructure, and access to
+                supermarkets, alongside other factors like education,
+                employment, socioeconomic status, and access to healthcare and
+                fresh produce. All of these can contribute to health
+                disparities within food deserts, such as increased chronic
+                illnesses.
+              </p>
+            </div>
+
+            <div class="bg-subitem">
+              <div class="bg-subitem-title-row">
+                <span class="bg-subitem-num">02.3</span>
+                <h3>Racial Segregation</h3>
+              </div>
+              <p>
+                Low-income communities have a higher proportion of Black and
+                Latino people who are disproportionately impacted by limited
+                food access. Decades of systemic racism and segregation have
+                placed historically marginalized populations in impoverished
+                neighborhoods. For example, in 2016, Black households were two
+                times likelier to be food insecure while Hispanic households
+                had an overall greater presence in food insecurity—and this
+                problem continues to this day, a decade later.
+              </p>
+            </div>
+
+            <div class="bg-subitem">
+              <div class="bg-subitem-title-row">
+                <span class="bg-subitem-num">02.4</span>
+                <h3>Lack of Accessible Transport</h3>
+              </div>
+              <p>
+                People in food deserts may have to travel further distances to
+                get to supermarkets. Predominantly Black or Hispanic
+                communities tend to have fewer supermarkets and local food
+                markets (which are important for offering nutritious produce)
+                compared to white communities. Another factor is that public
+                transport and vehicle ownership can impact how easy it is to
+                access food.
+              </p>
+            </div>
+
+          </div>
+
         </div>
 
-        <h2>
-          Massachusetts Healthy Incentives Program
-        </h2>
+      </article>
 
-        <p>
-          The Healthy Incentives Program (HIP) gives eligible SNAP
-          households money back on their EBT card when they purchase
-          qualifying locally grown fruits and vegetables from participating
-          farm vendors.
-        </p>
 
-        <p>
-          The incentive is automatically returned to the household's
-          EBT account when an eligible purchase is made.
-        </p>
+      <!-- SECTION 03: HOW HEALTH SYSTEMS CURRENTLY SUPPORT FOOD WELLNESS -->
 
-        <h3 class="minor-heading">
-          Monthly household incentives
-        </h3>
+      <article class="grocery-item" aria-labelledby="heading-health-systems">
 
-        <ul class="hip-tier-list">
+        <div class="grocery-number">03</div>
 
-          <li>
-            <span>1–2 Person Household</span>
-            <strong>Up to $40</strong>
-          </li>
+        <div class="grocery-content">
 
-          <li>
-            <span>3–5 Person Household</span>
-            <strong>Up to $60</strong>
-          </li>
+          <h2 id="heading-health-systems">
+            How Health Systems Currently Support Food Wellness
+          </h2>
 
-          <li>
-            <span>6+ Person Household</span>
-            <strong>Up to $80</strong>
-          </li>
+          <div class="row-address">
+            Public Health Infrastructure &amp; CDC Nutrition Initiatives
+          </div>
 
-        </ul>
+          <p>
+            Many players are involved in the regulation and management of food
+            throughout the country, including the government, insurance,
+            growers, food retailers, community members, researchers, and more.
+            It is a very complex system that has to go through many hoops to
+            alleviate systemic issues present in the U.S. and other countries
+            across the globe.
+          </p>
 
-        <p class="small-note">
-          Incentive amounts and program rules can change.
-          Check the official Massachusetts website for current
-          limits and eligibility.
-        </p>
+          <p>
+            There are multiple CDC programs that are dedicated to relieving
+            the stress citizens face in terms of food insecurity:
+          </p>
 
-        <a
-          href="https://www.mass.gov/massachusetts-healthy-incentives-program-hip"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="editorial-link-btn"
-        >
-          Official Mass.gov HIP Guide ↗
-        </a>
+          <div class="bg-sublist-heading">
+            CDC Nutrition &amp; Food Access Programs
+          </div>
+
+          <div class="bg-sublist">
+
+            <div class="bg-subitem">
+              <div class="bg-subitem-title-row">
+                <span class="bg-subitem-num">03.1</span>
+                <h3>State Physical Activity and Nutrition (SPAN)</h3>
+              </div>
+              <p>
+                Focuses on poor nutrition, physical inactivity, and obesity by
+                promoting food services and nutrition guidelines, expanding
+                fruit and vegetable voucher incentives and produce prescription
+                programs, promoting safe and accessible physical activity,
+                supporting the continuation of breastfeeding for infants, and
+                bolstering early education on activity and nutrition.
+              </p>
+            </div>
+
+            <div class="bg-subitem">
+              <div class="bg-subitem-title-row">
+                <span class="bg-subitem-num">03.2</span>
+                <h3>Racial and Ethnic Approaches to Community Health (REACH)</h3>
+              </div>
+              <p>
+                Seeks to reduce racial and ethnic health disparities using
+                culturally appropriate programs for a wide variety of groups.
+                It prioritizes improving health, preventing chronic diseases
+                (such as heart disease, type 2 diabetes, and obesity), and
+                reducing disparity.
+              </p>
+            </div>
+
+            <div class="bg-subitem">
+              <div class="bg-subitem-title-row">
+                <span class="bg-subitem-num">03.3</span>
+                <h3>High Obesity Program (HOP)</h3>
+              </div>
+              <p>
+                Focuses on rural areas in the U.S. where at least 40% of adult
+                residents have obesity by expanding fruit and vegetable voucher
+                incentives and produce, increasing physical activity through
+                community design, creating family healthy-weight programs, and
+                promoting early education.
+              </p>
+            </div>
+
+            <div class="bg-subitem">
+              <div class="bg-subitem-title-row">
+                <span class="bg-subitem-num">03.4</span>
+                <h3>
+                  Strategies for Fruit and Vegetable Voucher Incentives and
+                  Produce Prescriptions
+                </h3>
+              </div>
+              <p>
+                Focuses on groups that may have difficulty with access to
+                healthy fruits and vegetables, such as people living in rural
+                areas, tribal communities, neighborhoods with lower incomes,
+                and people with disabilities. Fruit and vegetable incentives
+                are coupons or cash incentives that consumers can use at the
+                point of purchase, while produce prescriptions are
+                prescriptions for fruits and vegetables to be used in a
+                healthcare setting or in the patient&rsquo;s community.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
 
       </article>
 
     </div>
 
 
-    <!-- NEXT STEPS -->
+    <!-- SOURCES (MATCHING DIRECTORY NOTE FOOTER SECTION ON GROCERIES PAGE) -->
 
-    <section class="next-steps">
+    <div class="directory-note" aria-labelledby="heading-sources">
 
-      <span class="eyebrow">TAKE THE NEXT STEP</span>
+      <span class="eyebrow">REFERENCES</span>
 
-      <h2>Finding Local Food Resources</h2>
+      <h2 id="heading-sources">Sources</h2>
 
       <p>
-        Food assistance programs work alongside local organizations,
-        farmers markets, community gardens, and food pantries to improve
-        access to nutritious food.
+        Data and public health program descriptions on this page are drawn
+        from the following resources:
       </p>
 
-      <div class="resource-links">
+      <ul class="sources-links">
+        <li>
+          <a
+            href="https://www.cdc.gov/nutrition/php/about/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CDC – Nutrition, Physical Activity, and Obesity ↗
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.medicalnewstoday.com/articles/322268#reduced-cancer-risk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Medical News Today – Health Benefits of Eating Well ↗
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.healthline.com/nutrition/food-deserts"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Healthline – What Are Food Deserts? ↗
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.cdc.gov/span/php/about/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CDC – State Physical Activity and Nutrition (SPAN) ↗
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.cdc.gov/reach/php/about/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CDC – Racial and Ethnic Approaches to Community Health (REACH) ↗
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.cdc.gov/hop/php/about/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CDC – High Obesity Program (HOP) ↗
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.cdc.gov/nutrition/php/public-health-strategy/voucher-incentives-produce-prescriptions.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CDC – Fruit and Vegetable Voucher Incentives and Produce Prescriptions ↗
+          </a>
+        </li>
+      </ul>
 
-        <a href="gardens.html">
-          Explore Community Gardens →
-        </a>
-
-        <a href="groceries.html">
-          Find Local Grocery Stores →
-        </a>
-
-      </div>
-
-    </section>
+    </div>
 
   </section>
 

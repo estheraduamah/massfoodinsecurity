@@ -237,7 +237,7 @@ padding: 48px 0 44px;
 border-bottom: 1px solid var(--border-subtle);
 }
 
-.home-visual {
+/* .home-visual {
 border: 1px solid var(--border-strong);
 background-color: var(--bg-subtle);
 padding: 36px 18px;
@@ -255,6 +255,13 @@ font-size: 14px;
 font-weight: 600;
 letter-spacing: 0.14em;
 color: var(--primary-green-dark);
+} */
+
+.home-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.2);
 }
 
 .visual-divider {
