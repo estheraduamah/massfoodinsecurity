@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,11 +21,52 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Extra breathing room between the plant image and hero text */
+    .home-hero {
+      gap: 3.25rem !important;
+      align-items: center !important;
+    }
+
+    /* Keep natural rectangular proportions, round corners, and outline in cream */
+
+    .home-hero .home-visual img {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      display: block !important;
+      border-radius: 22px !important;
+      border: 1px solid #f7f3eb !important;
+      background-color: #f7f3eb !important;
+      box-shadow: 0 0 0 1px rgba(31, 78, 61, 0.16), 0 10px 24px rgba(15, 23, 42, 0.08) !important;
+    }
+
+    .visual-credit {
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      color: #64748b;
+      text-align: center;
+    }
+
+    .visual-credit a {
+      color: #1f4e3d;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 860px) {
+      .home-hero {
+        gap: 2rem !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header class="site-header">
+
   <div class="header-inner">
 
     <a href="index.html" class="brand-link">
@@ -34,15 +74,16 @@
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html"class="active" aria-current="page">Home</a>
       <a href="background.html">Background</a>
       <a href="gardens.html">Community Gardens</a>
       <a href="groceries.html">Local Grocery Stores</a>
-      <a href="about.html">About Us</a>
+      <a href="about.html" >About Us</a>
     </nav>
 
   </div>
-</header>
 
+</header>
 
 <main class="container">
 
@@ -50,21 +91,19 @@
 
   <section class="home-hero">
 
-    <!-- <div class="home-visual">
-
-      <div class="home-visual-words">
-        <span>GROW</span>
-        <span class="visual-divider">·</span>
-        <span>SHARE</span>
-        <span class="visual-divider">·</span>
-        <span>NOURISH</span>
-      </div>
-
-    </div> -->
-
     <div class="home-visual">
-  <img src="images/plant.png" alt="Grow, Share, Nourish">
-</div>
+      <img src="images/plant.png" alt="Grow, Share, Nourish">
+      <!-- <p class="visual-credit">
+        Image source:
+        <a
+          href="https://cdn.pixabay.com/photo/2024/08/27/10/11/planting-9001234_1280.png"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pixabay Planting Illustration ↗
+        </a>
+      </p> -->
+    </div>
 
     <div class="hero-text">
 
@@ -156,7 +195,7 @@
     </div>
 
 
-    <!-- VERTICAL TIMELINE -->
+    <!-- VERTICAL TIMELINE (CHRONOLOGICAL ORDER) -->
 
     <div class="timeline" id="timeline-list">
 
@@ -199,6 +238,41 @@
 
         <div class="timeline-content">
 
+          <div class="date">NOV 10, 2026</div>
+
+          <h4>
+            Healey-Driscoll Administration Awards Over $580,000 in Grants to
+            Support Greater Food Access in Massachusetts
+          </h4>
+
+          <p>
+            The Massachusetts Department of Agricultural Resources (MDAR)
+            awarded over $580,000 across 13 organizations through the Urban
+            Agriculture and Food Ventures programs to strengthen local food
+            production, urban farms, and community gardens.
+          </p>
+
+          <a
+            href="https://www.mass.gov/news/healey-driscoll-administration-awards-over-580000-in-grants-to-support-greater-food-access-in-massachusetts"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="timeline-item"
+        data-category="purple"
+        data-side="left"
+      >
+
+        <div class="timeline-content">
+
           <div class="date">NOV 5, 2026</div>
 
           <h4>21st Annual Chain of Giving Turkey Delivery</h4>
@@ -225,7 +299,7 @@
       <article
         class="timeline-item"
         data-category="purple"
-        data-side="left"
+        data-side="right"
       >
 
         <div class="timeline-content">
@@ -241,6 +315,37 @@
 
           <a
             href="https://www.umass.edu/news/article/right-food-dialogue-focuses-ending-hunger-massachusetts"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="timeline-item"
+        data-category="green"
+        data-side="left"
+      >
+
+        <div class="timeline-content">
+
+          <div class="date">MAY 3, 2026</div>
+
+          <h4>Project Bread Walk for Hunger</h4>
+
+          <p>
+            Community members came together to raise funds
+            and awareness for reliable access to nutritious
+            food across Massachusetts.
+          </p>
+
+          <a
+            href="https://projectbread.org/walk-for-hunger/about"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -313,43 +418,20 @@
 
       </article>
 
-
-      <article
-        class="timeline-item"
-        data-category="green"
-        data-side="right"
-      >
-
-        <div class="timeline-content">
-
-          <div class="date">MAY 3, 2026</div>
-
-          <h4>Project Bread Walk for Hunger</h4>
-
-          <p>
-            Community members came together to raise funds
-            and awareness for reliable access to nutritious
-            food across Massachusetts.
-          </p>
-
-          <a
-            href="https://projectbread.org/walk-for-hunger/about"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read more →
-          </a>
-
-        </div>
-
-      </article>
-
     </div>
 
 
     <p class="source-note">
       Timeline entries and dates are provided as project content.
       Verify event details and link to original reporting before publishing.
+      Homepage illustration sourced from
+      <a
+        href="https://cdn.pixabay.com/photo/2024/08/27/10/11/planting-9001234_1280.png"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pixabay
+      </a>.
     </p>
 
   </section>
