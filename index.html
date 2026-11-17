@@ -30,7 +30,6 @@
     }
 
     /* Keep natural rectangular proportions, round corners, and outline in cream */
-
     .home-hero .home-visual img {
       width: 100% !important;
       height: auto !important;
@@ -55,9 +54,101 @@
       text-decoration: underline;
     }
 
+    /* Box-free horizontal editorial layout for Common Terms & Definitions */
+    .terms-section {
+      width: 100%;
+      padding: 3.5rem 0;
+      border-top: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    .terms-header {
+      max-width: 44rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .terms-header h2 {
+      font-family: "Fraunces", Georgia, serif;
+      color: #0f172a;
+      margin: 0.35rem 0 0.75rem;
+    }
+
+    .terms-header p {
+      color: #334155;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .terms-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 3.25rem;
+      row-gap: 2.25rem;
+      width: 100%;
+    }
+
+    .term-entry {
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(15, 23, 42, 0.14);
+    }
+
+    .term-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .term-num {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #1f4e3d;
+      flex-shrink: 0;
+    }
+
+    .term-entry h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.24rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .term-entry p {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 0.96rem;
+      line-height: 1.68;
+      color: #334155;
+      margin: 0;
+      padding-left: 1.95rem;
+    }
+
+    .term-entry a {
+      color: #1f4e3d;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
     @media (max-width: 860px) {
       .home-hero {
         gap: 2rem !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .terms-section {
+        padding: 2.5rem 0;
+      }
+
+      .terms-grid {
+        grid-template-columns: 1fr;
+        row-gap: 1.75rem;
+      }
+
+      .term-entry p {
+        padding-left: 0;
       }
     }
   </style>
@@ -74,11 +165,11 @@
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="index.html"class="active" aria-current="page">Home</a>
+      <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="background.html">Background</a>
       <a href="gardens.html">Community Gardens</a>
       <a href="groceries.html">Local Grocery Stores</a>
-      <a href="about.html" >About Us</a>
+      <a href="about.html">About Us</a>
     </nav>
 
   </div>
@@ -131,48 +222,106 @@
   </section>
 
 
-  <!--TERMS AND DEFINITIONS-->
-  <section class = 'home-hero'>
+  <!-- TERMS AND DEFINITIONS -->
 
-    <div>
+  <section class="terms-section" aria-labelledby="terms-heading">
+
+    <div class="terms-header">
+
       <span class="eyebrow">UNDERSTAND THE TERMS</span>
 
-      <h1>Common Terms &amp; Definitions</h1>
+      <h2 id="terms-heading">Common Terms &amp; Definitions</h2>
 
       <p>
-        Throughout this website you may see some terms you are not familiar with. Here is a few terms and definitions to help you as you explore our site:
-      </p>
-
-      <p>
-        <b>Community Garden:</b> A garden shared by members of a community, usually in an urban setting. Typically, they are fenced off to keep out deer, 
-        but anyone who is a part of a community garden has a key to get in. These spaces are maintained by members of the community or local neighborhood. 
-      </p>
-
-      <p>
-        <b>Urban Farm:</b> This can refer to various practices of cultivating, processing, and distributing food across urban areas. This allows members of a neighborhood or 
-        community to have more autonomy over their food system, and provides a sense of security for many involved. Depending on the size of the area you are working 
-        with and location exact practices may vary. Popular forms of Urban farming include hydroponics, beekeeping, CSA farming, and other forms of horticulture.
-      </p>
-
-      <p>
-        <b>CSA farming:</b> CSA stands for Community Supported Agriculture. In this practice, a farmer has a certain number of “shares” (typically boxes of produce) it can
-         provide to the community each week. This benefits the farmers, as they can make income early in the season and know how much of each crop they should grow, 
-         while the shareholders get a variety of fresh produce each week that can expose them to new recipes and get more in touch with their food system. 
-      </p>
-
-      <p>
-        <b>SNAP:</b> this stands for Supplemental Nutrition Assistance Program. This is a federally funded program that helps lower income families purchase 
-        eligible groceries. To apply, you must apply through your local Welfare office. The amount you receive will be based on a few factors, such as the number of people
-         in your household, income, and expenses. 
-      </p>
-
-      <p>
-        <b>EBT:</b>  This stands for Electronic Benefit Transfer, which is a payment system that allows you to purchase groceries with your SNAP benefits. It is a plastic card
-         that has your calculated amount of SNAP benefits uploaded to it at the beginning of each month. You can use your EBT card similar to any debit or credit card.
-          While not all stores accept SNAP/EBT, you can find some nearby on our <q>Local Grocery Stores</q> tab. 
+        Throughout this website you may see some terms you are not familiar with.
+        Here are a few terms and definitions to help you as you explore our site:
       </p>
 
     </div>
+
+    <div class="terms-grid">
+
+      <article class="term-entry">
+        <div class="term-title-row">
+          <span class="term-num">01</span>
+          <h3>Community Garden</h3>
+        </div>
+        <p>
+          A garden shared by members of a community, usually in an urban setting.
+          Typically, they are fenced off to keep out deer, and members of the
+          community garden have a key to get in. These spaces are maintained by
+          members of the community or local neighborhood.
+        </p>
+      </article>
+
+      <article class="term-entry">
+        <div class="term-title-row">
+          <span class="term-num">02</span>
+          <h3>Urban Farm</h3>
+        </div>
+        <p>
+          Cultivating, processing, and distributing food across urban areas so
+          neighborhoods have greater autonomy over their food system and a stronger
+          sense of food security. Depending on space and location, practices often
+          include hydroponics, beekeeping, CSA farming, and greenhouse growing.
+        </p>
+      </article>
+
+      <article class="term-entry">
+        <div class="term-title-row">
+          <span class="term-num">03</span>
+          <h3>CSA Farming</h3>
+        </div>
+        <p>
+          CSA stands for Community Supported Agriculture. A farmer offers a set
+          number of &ldquo;shares&rdquo; (typically weekly boxes of produce) to the
+          community. Farmers gain reliable support early in the season, while
+          shareholders receive fresh seasonal produce and connect directly with
+          their local food system.
+        </p>
+      </article>
+
+      <article class="term-entry">
+        <div class="term-title-row">
+          <span class="term-num">04</span>
+          <h3>SNAP</h3>
+        </div>
+        <p>
+          SNAP stands for Supplemental Nutrition Assistance Program. This is a
+          federally funded program that helps lower-income families purchase
+          eligible groceries. Applications go through your local assistance office,
+          and benefit amounts depend on household size, income, and expenses.
+        </p>
+      </article>
+
+      <article class="term-entry">
+        <div class="term-title-row">
+          <span class="term-num">05</span>
+          <h3>EBT</h3>
+        </div>
+        <p>
+          EBT stands for Electronic Benefit Transfer, a payment system that lets
+          you buy groceries with your SNAP benefits using a plastic card loaded
+          at the start of each month like a debit card. You can find participating
+          retailers on our <a href="groceries.html">Local Grocery Stores</a> tab.
+        </p>
+      </article>
+
+      <article class="term-entry">
+        <div class="term-title-row">
+          <span class="term-num">06</span>
+          <h3>HIP</h3>
+        </div>
+        <p>
+          HIP stands for the Massachusetts Healthy Incentives Program. It matches
+          your SNAP dollars automatically when you buy eligible fresh fruits and
+          vegetables from participating local farmers markets, farm stands, mobile
+          markets, and CSA programs, stretching your food budget further.
+        </p>
+      </article>
+
+    </div>
+
   </section>
 
 
